@@ -6,7 +6,7 @@ from aiogram.types import ContentType
 import random
 
 
-BOT_TOKEN = '6510250499:AAEjKTT7z4bBwXa1g7mBBbuVqP2qK_AN57o'
+BOT_TOKEN = ''
 
 # Создаем объекты бота и диспетчера
 bot = Bot(token=BOT_TOKEN)
@@ -34,7 +34,7 @@ async def process_start_command(message: Message):
     # Если пользователь новичек и его нет в словаре:
     if message.from_user.id not in users:
         users[message.from_user.id] = {
-        'in_game': False,
+        'in_game': False,   
         'secret_number': None,
         'attempts': None,
         'total_games': 0,
